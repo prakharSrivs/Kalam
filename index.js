@@ -112,6 +112,7 @@ app.use((err,req,res,next)=>{
     }
     res.status(400).render('Error/errTemplate',{err})
 })
-app.listen(4040 , ()=> {
-    console.log ('Listening on Port 4040')
+const port =process.env.port || 4040;
+app.listen(port , ()=> {
+    console.log ('Listening on Port ',port)
 })
