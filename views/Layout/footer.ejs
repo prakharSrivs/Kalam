@@ -1,0 +1,36 @@
+<div class="card bg-dark">
+    <div class="card-header text-white-50">
+      Quote
+    </div>
+    <div class="card-body ">
+      <blockquote class="blockquote ">
+        <p class="quote text-white-50"></p>
+        <footer class="blockquote-footer ">APJ Abdul Kalam <cite title="Source Title"></cite></footer>
+      </blockquote>
+    </div>
+  </div>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      let forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+    </script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

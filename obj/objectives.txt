@@ -1,0 +1,4 @@
+1. The heading should be injected into the page after the page is loaded . The letters should appear slowly like a transition.
+2. After scrolling up the image should be injected or appended and then the text should be appended letter by letter to give a feeling that the page is alive and is typing something . 
+3. The Links in the headline should also contain his contributions to nation and also a link for his videos collections .
+4. Adding animation of loading

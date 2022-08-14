@@ -1,0 +1,8 @@
+<%- include('../Layout/header.ejs') -%>
+<h1 style="padding: 200px 50px 400px 50px ;" class="alert-success"><%= data.msg %><br>You will be redirected in 2 sec</h1>
+<script>
+    setTimeout(() => {
+        window.location.href='http://localhost:4040/books/addBook'
+    }, 2000);
+</script>
+<%- include("../Layout/footer") %> 

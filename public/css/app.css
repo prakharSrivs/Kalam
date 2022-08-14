@@ -1,0 +1,118 @@
+/* CSS for home page */
+.homePageHeading{
+    display:flex;
+}
+.heading{
+    background-image: url("/images/bg-h1.jpg");
+    background-size: cover;
+    font-size: 300px;
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 215px;
+    padding-bottom: 290px;
+    letter-spacing: 50px;
+    color: #adb5bd;
+    border: 0;
+    margin: 0;
+}
+.box{
+    margin : 200px 100px 200px 100px;
+    padding :200px 100px 200px 100px; 
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.des{
+    background-image:linear-gradient(rgba(12,12,12,0.6),rgba(12,12,12,0.4)) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 80px;
+}
+.desHeading{
+    font-family: 'Roboto Slab';
+    font-size:100px ;
+    padding-top:40px;
+    text-align: center;
+    text-shadow: rgb(90, 90, 89) 0px 0 10px;
+}
+.desContent{
+    font-family: 'Rajdhani', sans-serif;
+    padding:100px 250px 100px 250px;
+    text-align: center;
+    font-size: 30px;
+}
+/* .desImage{ */
+    /* text-align: center; */
+    /* float:centre; */
+    /* width:600px; */
+    /* opacity: 0.9; */
+/* } */
+.card-group{
+    margin:300px;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    margin:0px;
+    border-radius: 0;
+}
+.cardImg{
+    height:100px
+}
+/* CSS for Books Page */
+.body{
+background-image:url("/images/bookImg.jpg");
+background-size:contain;
+background-color: #8e9aaf;
+padding: 0;
+margin:0;
+}
+.headingB{
+text-shadow: rgb(0,0,0) 1px 0 10px;
+padding: 310px;
+font-size: 300px;
+padding-top: 150px;
+padding-left: 150px;
+padding-bottom: 150px;
+letter-spacing: 50px;
+color: #c6dcf3;
+border: 0;
+margin: 0;
+}
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.bookimg{
+    padding:10px;
+  height: 360px;
+  width: 286px;
+}
+/* CSS for add Books Page */
+.addForm{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border: 1px solid black;
+    padding:100px 40px 102px 40px;
+    margin:10px 550px 80px 550px;
+    border-radius: 3%;
+}
+.desContent{
+    padding-bottom: 32px;
+}
+.btn{
+    margin-left: 10px;
+}
+.txtAdd{
+    margin-left: 10px;
+}
+.txtInp{
+    margin-left: 10px;
+}
+.boxInp{
+    display: flex;
+    padding-bottom:20px;
+    padding-left: 10px;
+}

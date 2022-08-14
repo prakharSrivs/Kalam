@@ -1,0 +1,46 @@
+<%- include('../Layout/header.ejs') -%>
+<div class="container py-5 px-5 " >
+
+    <div class="row my-5">
+    <%- include('../Layout/flash.ejs') -%>
+
+    <form action="/books/addBook?_method=PATCH" class="needs-validation col border rounded shadow my-5 px-5" method="post" novalidate>
+        <div class="display-1 text-center">
+            Add A Book
+        </div>
+        <div class="form-group my-2 ">
+            <label for="title" class="text-lg">Title </label>
+            <input type="text" name="title" id="title" class="form-control" required>      
+            <div class="valid-feedback">
+              Looks good!
+            </div>      
+            <div class="invalid-feedback">
+              Invalid Details
+            </div>
+        </div>
+        <div class="form-group my-2">
+            <label for="description">Description </label>
+            <input type="text" name="description" id="description" class="form-control" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>      
+              <div class="invalid-feedback">
+                Invalid Details
+              </div>
+        </div>
+        <div class="form-group my-2">
+            <label for="imgSrc">Image Source </label>
+            <input type="text" name="image_source" id="imgSrc" class="form-control" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>      
+              <div class="invalid-feedback">
+                Invalid Details
+              </div>
+        </div>
+        <button type="submit" class="btn btn-info rounded my-5">Add Book</button>
+    </form>
+  
+</div>
+</div>
+<%- include('../Layout/footer.ejs') %>

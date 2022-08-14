@@ -1,0 +1,4 @@
+const quotePara2 = document.querySelector('.quote')
+const data = ["Dont take rest after your first victory because if you fail in second more lips are waiting to say that your first victory was just luck" , "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.","To succeed in your mission, you must have single-minded devotion to your goal.","If you fail, never give up because FAIL means First Attempt In Learning","Creativity is seeing the same thing but thinking differently","Failure will never overtake me if my determination to succeed is strong enough.","All of us do not have equal talent. But , all of us have an equal opportunity to develop our talents."]
+const random = Math.floor(Math.random()*7);
+quotePara2.innerText = data[random]

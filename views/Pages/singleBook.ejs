@@ -1,0 +1,75 @@
+<%- include('../Layout/header.ejs') -%>
+<div class="container mt-5">
+<div class="row ">
+<div class="col-6 my-5 border shadow rounded">
+    <img class="mt-2 img-fluid rounded mx-auto d-block" src="<%=book.image_source%> " alt="Image of the Book" srcset="">
+    <div class="display-3 mt-4"><%= book.title %> </div>
+    <div class="text my-4">
+        <p><%=book.description %> </p>
+    </div>
+    <div>
+        <button class="btn btn-xl btn-dark my-4 shadow">Buy on Amazon
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em" width="1em" filter="invert(1)"><path d="M257.2 162.7c-48.7 1.8-169.5 15.5-169.5 117.5 0 109.5 138.3 114 183.5 43.2 6.5 10.2 35.4 37.5 45.3 46.8l56.8-56S341 288.9 341 261.4V114.3C341 89 316.5 32 228.7 32 140.7 32 94 87 94 136.3l73.5 6.8c16.3-49.5 54.2-49.5 54.2-49.5 40.7-.1 35.5 29.8 35.5 69.1zm0 86.8c0 80-84.2 68-84.2 17.2 0-47.2 50.5-56.7 84.2-57.8v40.6zm136 163.5c-7.7 10-70 67-174.5 67S34.2 408.5 9.7 379c-6.8-7.7 1-11.3 5.5-8.3C88.5 415.2 203 488.5 387.7 401c7.5-3.7 13.3 2 5.5 12zm39.8 2.2c-6.5 15.8-16 26.8-21.2 31-5.5 4.5-9.5 2.7-6.5-3.8s19.3-46.5 12.7-55c-6.5-8.3-37-4.3-48-3.2-10.8 1-13 2-14-.3-2.3-5.7 21.7-15.5 37.5-17.5 15.7-1.8 41-.8 46 5.7 3.7 5.1 0 27.1-6.5 43.1z"/></svg>
+        </button>
+        <p><%= book.author %> </p>
+        <% if (currentUser &&  (book.seller && book.seller.id==currentUser.id)) { %>
+        <form action="/books/<%=book._id%>?_method=DELETE" class="d-inline mb-2" method="post">
+          <button class="btn btn-danger rounded" type="submit">
+            DELETE
+          </button>
+        </form>
+        <% } %>
+    </div>
+</div>
+<div class="col-5 mx-3 my-5">
+  <form action="/books/<%=book._id%>/add/?_method=PATCH" method="post" class="border p-4 rounded shadow needs-validation" novalidate>
+      <div class="form-group">
+    <div class="display-4 mb-4">Add a Review</div>
+
+        <fieldset class="starability-checkmark">
+          <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="3" checked aria-label="No rating." />
+          <input type="radio" id="first-rate1" name="rating" value="1" />
+          <label for="first-rate1" title="Terrible">1 star</label>
+          <input type="radio" id="first-rate2" name="rating" value="2" />
+          <label for="first-rate2" title="Not good">2 stars</label>
+          <input type="radio" id="first-rate3" name="rating" value="3" />
+          <label for="first-rate3" title="Average">3 stars</label>
+          <input type="radio" id="first-rate4" name="rating" value="4" />
+          <label for="first-rate4" title="Very good">4 stars</label>
+          <input type="radio" id="first-rate5" name="rating" value="5" />
+          <label for="first-rate5" title="Amazing">5 stars</label>
+        </fieldset>
+          <label for="review" class="display-4 mb-2"></label>
+          <textarea name="body" class="form-control" id="review" cols="30" rows="2" required></textarea>
+      
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Please enter a review
+      </div>
+    </div>
+      <div class="form-group">
+      <button type="submit" class="btn btn-primary rounded my-5 mb-3">Submit</button>
+    </div>
+    </form>
+    <%- include('../Layout/flash.ejs') -%>
+
+     <% for( review of reviews) { %>
+        <div class="border p-4 rounded shadow my-2" >
+          <div class="fs-4"><%= review.author.username %><br></div>
+          <p class="starability-result mt-1" data-rating="<%= review.rating %>"></p>
+          <div class="text-muted"><%= review.body %> </div>
+          <% if (currentUser && (review.author.id==currentUser.id)) { %>
+            <form action="/books/<%=book._id%>/review/<%=review._id%> "class="d-flex justify-content-end align-items-center ml-auto" method="get">
+              <button type="submit" class="btn btn-sm btn-outline-danger">DELETE</button>
+            </form>
+          <% } %>
+             
+        </div>    
+     <% } %>
+    </div>
+
+</div>
+</div>
+<%- include('../Layout/footer.ejs') -%>
