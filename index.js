@@ -96,12 +96,6 @@ app.use('/user',authRouter)
 
 
 
-// routing to home page
-app.get('/', (req ,res,next)=>{
-    try{
-    res.render('Pages/home.ejs')}
-    catch(e){   next(new AppError('Cannot Access Home.ejs file',404))}
-})
 //Error Handling
 app.all('*',(req,res,next)=>{
   next(new AppError('Page Not Found', 404))
