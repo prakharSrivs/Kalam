@@ -1,6 +1,10 @@
 {
   "name":"kalam",
   "version":"1.0.0",
+  "engines":{
+    "node":"16.13.2",
+    "npm":"8.16.0"
+  },
   "description":"This app is a tribute to the APJ Abdul Kalam and it contains almost all of the books on Dr Kalam",
   "main":"index.js",
   "scripts": {
