@@ -108,7 +108,7 @@ app.use((err,req,res,next)=>{
     }
     res.status(400).render('Error/errTemplate',{err})
 })
-const port =process.env.port || 4040;
+const port =process.env.PORT || 4040;
 app.listen(port , ()=> {
     console.log ('Listening on Port ',port)
 })
