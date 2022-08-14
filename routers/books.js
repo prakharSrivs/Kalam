@@ -53,13 +53,13 @@ router.get('',AsyncErr(async (req,res)=>{
 
 
 //routing to the form page of adding book
-router.get('/addBook',isLoggedIn,(req,res)=>{
-    try{
-   res.render('Pages/add.ejs'); }
-   catch(e){
-    throw new AppError('Doc Not Found',404)
-   }
-})
+// router.get('/addBook',isLoggedIn,(req,res)=>{
+//     try{
+//    res.render('Pages/add.ejs'); }
+//    catch(e){
+//     throw new AppError('Doc Not Found',404)
+//    }
+// })
 
 //routing to the page for opening a single book
 router.get('/:id',AsyncErr(async(req,res)=>{
@@ -104,17 +104,17 @@ router.patch('/:id/add',isLoggedIn,validateReviews,AsyncErr(async(req,res,next)=
 }))
 
 
-//inserting data into the database
-router.patch('/addBook',isLoggedIn,validateBookData,AsyncErr(async(req,res)=>{
-    console.log(req.body)
-    const {title,description,image_source}=req.body;
-    const addBook = new Book({title:title,description:description,image_source:image_source});
-    addBook.seller=req.user.id;
-    await addBook.save()
-    console.log("Data Created ",addBook)
-    req.flash('success','Book Added Successfully')
-    res.redirect('/books/addBook')
-}))
+// //inserting data into the database
+// router.patch('/addBook',isLoggedIn,validateBookData,AsyncErr(async(req,res)=>{
+//     console.log(req.body)
+//     const {title,description,image_source}=req.body;
+//     const addBook = new Book({title:title,description:description,image_source:image_source});
+//     addBook.seller=req.user.id;
+//     await addBook.save()
+//     console.log("Data Created ",addBook)
+//     req.flash('success','Book Added Successfully')
+//     res.redirect('/books/addBook')
+// }))
 
 
 
