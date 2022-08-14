@@ -1,4 +1,11 @@
 /* CSS for home page */
+html{
+    scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+html::-webkit-scrollbar-track{
+    background-color:red;
+}
 .homePageHeading{
     display:flex;
 }
@@ -14,7 +21,9 @@
     color: #adb5bd;
     border: 0;
     margin: 0;
+    max-width: 100%;
 }
+
 .box{
     margin : 200px 100px 200px 100px;
     padding :200px 100px 200px 100px; 
@@ -65,6 +74,7 @@ background-size:contain;
 background-color: #8e9aaf;
 padding: 0;
 margin:0;
+
 }
 .headingB{
 text-shadow: rgb(0,0,0) 1px 0 10px;
@@ -115,4 +125,7 @@ margin: 0;
     display: flex;
     padding-bottom:20px;
     padding-left: 10px;
+}
+.navbar{
+    opacity:0.8;
 }
