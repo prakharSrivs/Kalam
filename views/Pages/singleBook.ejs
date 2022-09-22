@@ -1,7 +1,7 @@
 <%- include('../Layout/header.ejs') -%>
 <div class="container mt-5">
-<div class="row ">
-<div class="col-6 my-5 border shadow rounded">
+<div class="row single-book-mobile">
+<div class="col-6 my-5 border shadow rounded container-book">
     <img class="mt-2 img-fluid rounded mx-auto d-block" src="<%=book.image_source%> " alt="Image of the Book" srcset="">
     <div class="display-3 mt-4"><%= book.title %> </div>
     <div class="text my-4">
@@ -21,7 +21,7 @@
         <% } %>
     </div>
 </div>
-<div class="col-5 mx-3 my-5">
+<div class="col-5 mx-3 my-5 container-review">
   <form action="/books/<%=book._id%>/add/?_method=PATCH" method="post" class="border p-4 rounded shadow needs-validation" novalidate>
       <div class="form-group">
     <div class="display-4 mb-4">Add a Review</div>

@@ -40,83 +40,26 @@ html::-webkit-scrollbar-track{
     background-repeat: no-repeat;
     padding: 10%;
 }
-@media (max-width:804px)
-{
-    .heading{
-        background-image: url("/images/bg-h1.jpg");
-        background-size: cover;
-        background-position:75% 50% ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 1.1rem;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100vw;
-        font-size:6rem;
-        color: #575a5e;
-        margin: 0;
-        height: 350px;
-    }
-    .footer-text-in-relative{
-        font-size: 1.1rem;
-    }
-}
-@media (max-width:350px){
-    .heading{
-        font-size:4rem;
-        padding: 0;
-        padding-top:25px ;
-        height: 200px;
-    }
-    .desHeading{
-        font-size: 2rem;
-    }
-    .desContent{
-        font-size: 14px; ;
-    }
-    .des{
-        padding:6%;
-    }
-}
-
-.box{
-    margin : 200px 100px 200px 100px;
-    padding :200px 100px 200px 100px; 
-    border: 1px solid black;
-    border-radius: 5%;
-}
-
-
-.card-group{
-    margin: 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.card{
-    margin:0px;
-    border-radius: 0;
-}
-.cardImg{
-    height:100px
-}
 /* CSS for Books Page */
-.body{
-background-image:url("/images/bookImg.jpg");
-background-size:contain;
-background-color: #8e9aaf;
-padding: 0;
-margin:0;
-
+.book{
+    width: 18rem;
 }
+.body{
+    background-image:url("/images/bookImg.jpg");
+    background-size:contain;
+    background-color: #8e9aaf;
+    padding: 0;
+    margin:0;
+    
+    }
+    
 .headingB{
 text-shadow: rgb(0,0,0) 1px 0 10px;
 padding: 310px;
-font-size: 300px;
-padding-top: 150px;
-padding-left: 150px;
-padding-bottom: 150px;
+font-size: 20rem;
+padding: 0;
+padding-top: 20vh;
+padding: 10% ;
 letter-spacing: 50px;
 color: #c6dcf3;
 border: 0;
@@ -126,13 +69,12 @@ margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items:center;
 }
 .bookimg{
-    padding:10px;
-  height: 360px;
-  width: 286px;
+    object-fit:contain;
 }
+/* Single Books CSS */
+
 /* CSS for add Books Page */
 .addForm{
     display:flex;
@@ -163,4 +105,131 @@ margin: 0;
 .navbar{
     opacity:0.8;
 }
+
+@media (max-width:804px)
+{
+    /* CSS for home page */
+    .heading{
+        background-image: url("/images/bg-h1.jpg");
+        background-size: cover;
+        background-position:75% 50% ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1.1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100vw;
+        font-size:6rem;
+        color: #575a5e;
+        margin: 0;
+        height: 350px;
+    }
+    .footer-text-in-relative{
+        font-size: 1.1rem;
+    }
+    /* CSS for Books page  */
+    .headingB{
+        font-size: 7.5rem;
+        padding:0;
+        letter-spacing: 1.1rem;
+        padding: 10% 0;
+
+    }
+    .book{
+        width: 45vw;
+    }
+    .bookimg{
+        object-fit: contain;
+    }
+    .card-body{
+        display: flex;
+        align-items: baseline;
+    }
+}
+@media (max-width:350px){
+    /* CSS for home page */
+    .heading{
+        font-size:4rem;
+        padding: 0;
+        padding-top:25px ;
+        height: 200px;
+    }
+    .desHeading{
+        font-size: 2rem;
+    }
+    .desContent{
+        font-size: 14px; ;
+    }
+    .des{
+        padding:6%;
+    }
+    /* CSS for Books page  */
+    .headingB{
+        font-size: 4rem;
+    }
+    .book{
+       width:45vw;
+       height: fit-content;
+    }
+    .card-title{
+        font-size: 15px;
+    }
+    .btn-mobile-font{
+        font-size: 12px;
+        margin: 5px;
+    }
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    /* Single Book CSS */
+    .single-book-mobile{
+        display: flex;
+        flex-direction:column;
+    }
+    .container-book{
+        margin:0;
+        width: 100%;
+    }
+    .container-review{
+        margin: 0;
+        width:100%;
+    }
+    .addForm{
+        width: 100%;
+        margin: 0;
+        padding:0;
+    }
+    .register-container{
+        margin:0;
+        padding: 0;
+    }
+}
+
+.box{
+    margin : 200px 100px 200px 100px;
+    padding :200px 100px 200px 100px; 
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+
+.card-group{
+    margin: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    margin:0px;
+    border-radius: 0;
+}
+.cardImg{
+    height:100px
+}
+
+
+
 
