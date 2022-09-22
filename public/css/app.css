@@ -12,16 +12,72 @@ html::-webkit-scrollbar-track{
 .heading{
     background-image: url("/images/bg-h1.jpg");
     background-size: cover;
-    font-size: 300px;
-    padding-top: 150px;
-    padding-left: 100px;
-    padding-right: 215px;
-    padding-bottom: 290px;
-    letter-spacing: 50px;
-    color: #adb5bd;
-    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 20px;
+    width: 100vw;
+    font-size:10rem;
+    color: #575a5e;
     margin: 0;
-    max-width: 100%;
+    
+    height: 500px;
+}
+
+.desHeading{
+    font-size:4rem ;
+    text-align: center;
+    text-shadow: rgb(90, 90, 89) 0px 0 10px;
+}
+.desContent{
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.des{
+    background-image:linear-gradient(rgba(12,12,12,0.6),rgba(12,12,12,0.4)) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10%;
+}
+@media (max-width:804px)
+{
+    .heading{
+        background-image: url("/images/bg-h1.jpg");
+        background-size: cover;
+        background-position:75% 50% ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1.1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100vw;
+        font-size:6rem;
+        color: #575a5e;
+        margin: 0;
+        height: 350px;
+    }
+    .footer-text-in-relative{
+        font-size: 1.1rem;
+    }
+}
+@media (max-width:350px){
+    .heading{
+        font-size:4rem;
+        padding: 0;
+        padding-top:25px ;
+        height: 200px;
+    }
+    .desHeading{
+        font-size: 2rem;
+    }
+    .desContent{
+        font-size: 14px; ;
+    }
+    .des{
+        padding:6%;
+    }
 }
 
 .box{
@@ -30,34 +86,12 @@ html::-webkit-scrollbar-track{
     border: 1px solid black;
     border-radius: 5%;
 }
-.des{
-    background-image:linear-gradient(rgba(12,12,12,0.6),rgba(12,12,12,0.4)) ;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 80px;
-}
-.desHeading{
-    font-family: 'Roboto Slab';
-    font-size:100px ;
-    padding-top:40px;
-    text-align: center;
-    text-shadow: rgb(90, 90, 89) 0px 0 10px;
-}
-.desContent{
-    font-family: 'Rajdhani', sans-serif;
-    padding:100px 250px 100px 250px;
-    text-align: center;
-    font-size: 30px;
-}
-/* .desImage{ */
-    /* text-align: center; */
-    /* float:centre; */
-    /* width:600px; */
-    /* opacity: 0.9; */
-/* } */
+
+
 .card-group{
-    margin:300px;
+    margin: 10%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .card{
@@ -129,3 +163,4 @@ margin: 0;
 .navbar{
     opacity:0.8;
 }
+
