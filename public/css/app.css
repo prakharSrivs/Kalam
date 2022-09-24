@@ -9,6 +9,12 @@ html::-webkit-scrollbar-track{
 .homePageHeading{
     display:flex;
 }
+body{
+    background-color: #EAEDED;
+}
+.container{
+    background-color: white;
+}
 .heading{
     background-image: url("/images/bg-h1.jpg");
     background-size: cover;
@@ -173,13 +179,7 @@ margin: 0;
         margin:5%;
     }
     /* CSS for Login Page */
-    .login-container{
-        
-    }
-    .login-form{
-        margin:4%;
-        margin-top:14%;
-    }
+    
 }
 @media (max-width:400px){
     /* CSS for home page */
@@ -201,6 +201,9 @@ margin: 0;
     /* CSS for Books page  */
     .headingB{
         font-size: 4rem;
+        padding-top: 18%;
+        margin-left: 10px;
+        letter-spacing: 8px;
     }
     .book{
        width:45vw;
@@ -253,6 +256,13 @@ margin: 0;
     .login-container{
         margin:0;
         padding:0;
+    }
+    .login-container{
+        padding-top:10px;
+    }
+    .login-form{
+        margin:4%;
+        margin-top:14%;
     }
 }
 
